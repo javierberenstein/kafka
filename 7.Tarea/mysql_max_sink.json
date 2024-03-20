@@ -1,0 +1,15 @@
+{
+    "name": "mysql-max-sink",
+    "config": {
+        "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+        "tasks": "[]",
+        "topics": "FLIGHTS_ORIGIN_COUNT",
+        "connection.url": "jdbc:mysql://mysql:3306/db?user=user&password=password&useSSL=false",
+        "insert.mode": "upsert",
+        "auto.evolve": "true",
+        "delete.enabled": "false",
+        "pk.mode": "record_key",
+        "pk.fields":"ORIGINCITY",
+        "type":"sink"
+    }
+}
